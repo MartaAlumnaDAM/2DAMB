@@ -1,0 +1,87 @@
+/* ------- Actividades Unidad 1 --------- */
+
+A. Ejecución paralela de código
+
+Si observamos el siguiente ejemplo de pseudocódigo
+public class TestClass {
+int x;
+public void testMethod1() {
+for (int i=1; i <= 5; i++) {
+x++;
+}
+}
+public void testMethod2() {
+for (int j=1; j <= 5; j++) {
+x++;
+}
+}
+public void sequential() {
+x = 0;
+testMethod1();
+testMethod2();
+System.out.println(x);
+}
+public void parallel() {
+x = 0;
+// cobegin-coend means that both methods are run simultaneously
+// These sentences doesn't exist in Java. They are used for
+// sample purposes
+cobegin
+testMethod1();
+testMethod2();
+coend
+System.out.println(x);
+}
+}
+
+Responde a las siguientes preguntas respecto al còdigo anterior:
+
+¿Qué valor tendrá x tras ejecutar el método sequential?		x = 10
+¿Qué valor tendrá x tras ejecutar el método parallel?		Impredecible el valor que tomará x
+
+B. Concurrencia hardware
+
+Si habéis comprado un procesador hace poco, o estáis al día en cuanto al hardware, sabréis que una de las características
+de los procesadores es su número de núcleos (4, 8, 16).
+Pero además, al número de núcleos lo acompaña otra característica que es el número de hilos o threads, que suele ser el
+doble que el de núcleos.
+
+Núcleos vs Threads
+
+¿Qué implicación tienen los threads de un procesador con respecto a la concurrencia?
+
+
+¿Si un equipo tiene 8 núcleos / 16 hilos significa eso que puede ejecutar 16 procesos a la vez?
+Solo se pueden ejecutar 8 procesos a la vez.
+
+
+C. Escalado de sistemas
+
+La capacidad de procesamiento de los sistemas se puede ampliar de diferentes formas. Todo va a depender de si estamos
+trabajando con sistemas on-premise o con sistemas en la nube.
+Con escalado nos referimos a la posibilidad de incrementar las capacidades de un sistema.
+
+Escalado horizontal vs vertical
+Explica brevemente qué es el escalado horizontal y qué es el escalado vertical.
+Vertical significa amplicar capacidad física, como RAM, almacenamiento, etc
+Horizontal implica compartir memoria entre varios equipos, por ejemplo.
+
+
+Investiga las diferencias, ventajas e inconvenientes del escalado horizontal y el escalado vertical.
+¿A qué tipo de sistemas (on-premise vs cloud) se aplica cada uno de ellos?
+
+
+D. Planificación de procesos
+Dados los tres procesos que se ponen como ejemplo en la unidad
+Proceso Tiempo de llegada Tiempo uso CPU Prioridad
+P1 0 10 5
+P2 1 6 10
+P3 2 3 7
+
+La mayor prioridad es la del número menor
+
+Núcleos vs Threads
+¿Qué implicación tienen los threads de un procesador con respecto a la concurrencia?
+¿Si un equipo tiene 8 núcleos / 16 hilos significa eso que puede ejecutar 16 procesos a la vez?
+
+

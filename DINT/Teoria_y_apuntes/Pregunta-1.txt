@@ -1,0 +1,13 @@
+Quiero diseñar una aplicación de gestión de alumnos que se ejecuta en una tableta con sistema operativo android:
+1.- La pantalla de la tableta es de 14.6" y de una resolución de 2960 x 1848 pixels
+2.- La aplicación tendrá dos wireframes de alta definición con colores.
+3.- La primera pantalla es la de "login":
+- Foto del logo de la empresa (lo creas tu mismo).
+- La palagra "Login" en la parte superior derecha al logo de la empresa.
+- Una caja de texto para ingresar el "usuario".
+- Una caja de texto para ingresar la "clave" o "password".
+- Un botón "Aceptar" para ir a la segunda pantalla de listado de alumnos.
+4.- La segunda pantalla es el listado de alumnos:
+- Se muestra: nombre, apellidos, fecha nacimiento, curso, grupo.
+- Al pie de pantalla dos botones: Añadir y Salir.
+5.- El diseño debe ser moderno y minimalista

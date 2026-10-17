@@ -1,0 +1,82 @@
+Dame el prompt para diseñar el prototipo de una app como sigue:
+
+* Para la interacción de los clientes con un hotel-balneario
+* Estará disponible para dispositivo móvil a partir de un código QR
+* Las pantallas que mostrará son:
+	• Pantalla de bienvenida al hotel-balneario.
+	• Selección del menú de comida y cena: los usuarios podrán elegir entre
+		diferentes opciones de primer plato, segundo plato y postre, tanto para la
+		comida como para la cena del día actual.
+	• Catálogo de tratamientos: la aplicación informará a los clientes de los
+		diferentes tratamientos que puede contratar.
+	• Pantalla de detalle de cada tratamiento: duración del tratamiento, masajes
+	(relajante, descontracturante, piedras calientes…), tratamientos faciales y corporales, aromaterapia, 
+	envolturas de barro o algas y circuitos termales(piscina, jacuzzi, baño turco, zona de relax con infusiones…).
+	• Calendario de reservas: los clientes deben reservar los diferentes
+	tratamientos a recibir de forma individualizada o por grupos para las franjas
+	horarias disponibles indicando el precio.
+	• Comunicación con otras habitaciones: la aplicación también servirá para que
+	los huéspedes se comuniquen con el resto de las habitaciones del hotel, o con
+	la recepción. La pantalla táctil contará con cámara y micrófono, de forma que
+	la comunicación será de tipo videollamada. Además, se debe permitir
+	llamadas de varios participantes.
+	• Valoraciones y opiniones: opiniones de otros usuarios, valoración por
+	estrellas, fotos del entorno…
+	
+	Prompt para generar el prototipo
+
+    Rol: Eres un experto diseñador UX/UI y desarrollador frontend especializado en aplicaciones móviles para el sector hotelero y de bienestar.
+
+    Objetivo: Diseña el prototipo interactivo de una aplicación web móvil (PWA) accesible mediante código QR para los huéspedes de un hotel-balneario. La interfaz debe ser moderna, relajante (usando tonos pastel, blancos, verdes suaves o azules agua), intuitiva y accesible.
+
+    Estructura y Pantallas requeridas:
+
+        Pantalla de Bienvenida (Welcome):
+
+            Saludo personalizado al huésped.
+
+            Acceso rápido a las secciones principales (Menús, Tratamientos, Reservas, Chat/Videollamada, Opiniones).
+
+            Estado de la estancia (número de habitación, fechas).
+
+        Menú de Comida y Cena (Restaurante):
+
+            Selector de servicio (Comida / Cena del día actual).
+
+            Listado interactivo con opciones de Primer plato, Segundo plato y Postre.
+
+            Botón de confirmación de selección de menú.
+
+        Catálogo de Tratamientos (Spa):
+
+            Vista general de categorías: Masajes (relajantes, descontracturantes, piedras calientes), Faciales/Corporales, Aromaterapia, Envolturas (barro/algas) y Circuitos termales (piscina, jacuzzi, baño turco, zona relax con infusiones).
+
+        Pantalla de Detalle del Tratamiento:
+
+            Información detallada: nombre, descripción, duración estimada y precio.
+
+            Botón directo para "Reservar ahora".
+
+        Calendario de Reservas:
+
+            Selección de modalidad: individual o por grupos.
+
+            Selector de franjas horarias disponibles en tiempo real.
+
+            Resumen de precio final y confirmación de reserva.
+
+        Comunicación (Videollamadas):
+
+            Interfaz estilo videollamada integrada.
+
+            Opciones para comunicarse con la recepción del hotel o con otras habitaciones.
+
+            Soporte visual para llamadas multiparticipante (iconos de cámara, micrófono y colgar).
+
+        Valoraciones y Opiniones:
+
+            Feed de reseñas de otros huéspedes.
+
+            Sistema de puntuación por estrellas y galería de fotos del entorno del balneario.
+
+            Formulario para dejar una nueva opinión.

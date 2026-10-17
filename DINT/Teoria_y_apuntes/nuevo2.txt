@@ -1,0 +1,150 @@
+# Documento de Diseño e Interfaz de Usuario (UI/UX)
+**Proyecto:** Sistema de Gestión de Alumnos  
+**Plataforma Target:** Tablet Android (14.6" - 2960 x 1848 px, Relación de Aspecto 16:10)  
+**Filosofía de Diseño:** Material Design 3 — Moderno, Limpio y Minimalista  
+
+---
+
+## 1. ESPECIFICACIONES TÉCNICAS Y PALETA DE COLORES
+
+### 1.1 Resolución y Espaciado
+- **Resolución Máxima:** 2960 x 1848 píxeles
+- **Orientación Predeterminada:** Horizontal (Landscape)
+- **Densidad de Pantalla Recomendada:** ~240–320 dpi (XHDPI / XXHDPI)
+- **Área Táctil Mínima (Touch Target):** `48dp` x `48dp`
+
+### 1.2 Paleta de Colores
+
+| Rol | Nombre del Color | Hexadecimal | Uso Principal |
+| :--- | :--- | :--- | :--- |
+| **Fondo Principal** | Slate 50 | `#F8FAFC` | Fondo general de las pantallas |
+| **Superficie / Card** | Blanco Puro | `#FFFFFF` | Contenedores, tarjetas y tablas |
+| **Primario** | Royal Blue | `#2563EB` | Botón "Aceptar", "Añadir", elementos activos |
+| **Primario Hover/Focus** | Dark Blue | `#1D4ED8` | Estado presionado de botones principales |
+| **Texto Principal** | Slate 900 | `#0F172A` | Títulos, nombres, datos primarios |
+| **Texto Secundario** | Slate 500 | `#64748B` | Etiquetas, placeholders, encabezados de tabla |
+| **Bordes e Inactivos** | Slate 200 | `#E2E8F0` | Líneas divisoras, bordes de cajas de texto |
+| **Alerta / Salir** | Rose 500 / 50 | `#EF4444` / `#FEF2F2` | Botón "Salir", acciones destructivas o cierre |
+
+---
+
+## 2. PANTALLA 1: LOGIN
+
+### 2.1 Distribución y Layout
+Aprovechando las 14.6 pulgadas de la pantalla, la interfaz evita extender los campos a lo largo de los 2960 píxeles. En su lugar, utiliza un **contenedor central elevado** (*Card Layout*) para mantener el foco del usuario.
+
+- **Contenedor Central:**
+  - **Ancho:** `540dp`
+  - **Fondo:** `#FFFFFF` con esquinas redondeadas de `24dp`
+  - **Sombra:** `0px 10px 25px rgba(0, 0, 0, 0.05)`
+
+### 2.2 Componentes
+
+1. **Logotipo EduGest (A la izquierda de "Login"):**
+   - Isotipo compuesto por un libro estilizado (vectorial) en tono azul `#2563EB` junto a un acento circular en `#FBBF24`.
+   - Dimensiones: `48dp` x `48dp`.
+2. **Título "Login":**
+   - Posicionado inmediatamente a la derecha del logo.
+   - Fuente: *Inter / Roboto Semi-Bold*, `28sp`, Color `#0F172A`.
+3. **Caja de Texto: "Usuario"**
+   - Etiqueta superior: `14sp`, Medium, `#64748B`.
+   - Campo de entrada: Alto de `56dp`, bordes de `12dp` con color `#E2E8F0`.
+   - Placeholder: *"Ingrese su usuario"*.
+4. **Caja de Texto: "Clave / Password"**
+   - Etiqueta superior: `14sp`, Medium, `#64748B`.
+   - Campo de entrada: Alto de `56dp`, bordes de `12dp` con color `#E2E8F0`.
+   - Placeholder: *"••••••••"*.
+   - Icono derecho: Ojo (*toggle visibility*).
+5. **Botón "Aceptar":**
+   - Ancho completo del contenedor (*Full Width*).
+   - Alto: `52dp`. Fondo `#2563EB`, Texto blanco `16sp` Bold.
+   - Esquinas redondeadas: `12dp`.
+
+### 2.3 Wireframe Visual (Pantalla 1)
+
++-----------------------------------------------------------------------------------+
+|                                                                                   |
+|                                                                                   |
+|                      +-------------------------------------+                      |
+|                      |                                     |                      |
+|                      |   [ Logo ]   Login                  |                      |
+|                      |                                     |                      |
+|                      |   -------------------------------   |                      |
+|                      |                                     |                      |
+|                      |   Usuario                           |                      |
+|                      |   [ Ingrese su usuario          ]   |                      |
+|                      |                                     |                      |
+|                      |   Contraseña                        |                      |
+|                      |   [ ••••••••                  (o) ] |                      |
+|                      |                                     |                      |
+|                      |   +-----------------------------+   |                      |
+|                      |   |           ACEPTAR           |   |                      |
+|                      |   +-----------------------------+   |                      |
+|                      |                                     |                      |
+|                      +-------------------------------------+                      |
+|                                                                                   |
+|                                                                                   |
++-----------------------------------------------------------------------------------+
+
+
+---
+
+## 3. PANTALLA 2: LISTADO DE ALUMNOS
+
+### 3.1 Distribución y Layout
+Estructura tipo *Dashboard* horizontal, diseñada para maximizar la visibilidad de los datos en la pantalla panorámica.
+
+- **Barra Superior (App Bar):**
+  - Altura: `64dp`.
+  - Muestra la marca **EduGest** a la izquierda y el estado de la sesión a la derecha.
+- **Área Principal (Tabla de Datos):**
+  - Margen lateral: `32dp`.
+  - Formato de tarjeta blanca elevated con fondo `#FFFFFF` y bordes de `16dp`.
+- **Barra Inferior de Acciones (Footer):**
+  - Fijada en la parte inferior con margen de `24dp`.
+
+### 3.2 Tabla de Alumnos (Campos)
+
+| Nombre | Apellidos | Fecha Nacimiento | Curso | Grupo |
+| :--- | :--- | :--- | :--- | :--- |
+| **Ana** | García López | 12/03/2012 | 1º ESO | A |
+| **Carlos** | Martínez Ruiz | 05/08/2011 | 2º ESO | B |
+| **Lucía** | Fernández Gómez | 22/11/2012 | 1º ESO | A |
+| **Mateo** | Sánchez Pérez | 19/01/2010 | 3º ESO | C |
+| **Sofía** | Torres Díaz | 30/06/2011 | 2º ESO | A |
+
+- **Estilo de la Tabla:**
+  - Encabezados en Mayúsculas/Bold (`14sp`, Color `#64748B`).
+  - Filas con alto de `60dp` para fácil interacción táctil.
+  - Divisores finos entre filas en color `#F1F5F9`.
+
+### 3.3 Botones Inferiores
+
+1. **Botón "Añadir":**
+   - Ubicación: Extremo inferior izquierdo.
+   - Estilo: Contenedor con relleno `#2563EB`, texto blanco en negrita e icono `+` a la izquierda.
+   - Dimensiones: Alto `48dp`, Ancho `160dp`, Esquinas `12dp`.
+2. **Botón "Salir":**
+   - Ubicación: Extremo inferior derecho.
+   - Estilo: Fondo suave `#FEF2F2`, texto en tono rojo `#EF4444` e icono de salida.
+   - Dimensiones: Alto `48dp`, Ancho `140dp`, Esquinas `12dp`.
+
+### 3.4 Wireframe Visual (Pantalla 2)
+
++-----------------------------------------------------------------------------------+
+| [Logo] EduGest | Gestión de Alumnos                           [ Usuario: Admin ]  |
++-----------------------------------------------------------------------------------+
+|                                                                                   |
+|  +-----------------------------------------------------------------------------+  |
+|  | NOMBRE     APELLIDOS        FECHA NAC.    CURSO            GRUPO            |  |
+|  +-----------------------------------------------------------------------------+  |
+|  | Ana        García López     12/03/2012    1º ESO           A                |  |
+|  | Carlos     Martínez Ruiz    05/08/2011    2º ESO           B                |  |
+|  | Lucía      Fernández Gómez  22/11/2012    1º ESO           A                |  |
+|  | Mateo      Sánchez Pérez    19/01/2010    3º ESO           C                |  |
+|  | Sofía      Torres Díaz      30/06/2011    2º ESO           A                |  |
+|  +-----------------------------------------------------------------------------+  |
+|                                                                                   |
+|                                                                                   |
+|  [ + Añadir ]                                                     [ -> Salir ]    |
++-----------------------------------------------------------------------------------+
