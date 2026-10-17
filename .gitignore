@@ -1,1 +1,6 @@
 NetBeans-Portable-*/
+*.tar
+/ADA/Practicas_y_codigo/Entregas/UD2-2 Ficheros JSON/UD2EjerJson1401/nbproject/private/
+/ADA/Practicas_y_codigo/Entregas/UD2-2 Ficheros JSON/UD2EjerJson1401/build/
+/ADA/Practicas_y_codigo/Entregas/UD2-2 Ficheros JSON/UD2EjerJson1402/nbproject/private/
+/ADA/Practicas_y_codigo/Entregas/UD2-2 Ficheros JSON/UD2EjerJson1402/build/
