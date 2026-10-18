@@ -17,7 +17,9 @@ public class Fich02Paths {
             Path path = Paths.get(archivo);
             
             Path pathFromFile = file.toPath();
+            System.out.println(pathFromFile);
             File fileFromPath = path.toFile();
+            System.out.println(fileFromPath.toString());
             
             System.out.println("Absolute  Path (File): "+file.getAbsolutePath());
             System.out.println("Canonical Path (File): "+file.getCanonicalPath());

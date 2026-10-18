@@ -28,7 +28,7 @@ public class UD2EjerJson1402 {
         /* P1) Cargar Archivo a Memoria en objeto de JSONArray */
         String fichero = "./datos/sistoperativos.json";
         JSONArray sistemas = JSONUtils.getArrayFromFile(fichero);
-        
+
         /*P2) Recorrer el JSONArray de JSONObject con for(int i=0;...*/
         System.out.println("Recorrer el Array de Objetos con FOR y contador");
         System.out.println("---".repeat(40));
@@ -45,12 +45,13 @@ public class UD2EjerJson1402 {
         System.out.println("---".repeat(40));
         for (Object obj : sistemas) {
 
-            JSONObject jObj = (JSONObject) obj;
+            JSONObject sistema = (JSONObject) obj;
+            
+            String salida = "{\"Id\":" + sistema.getInt("Id") + ",\"Nombre\":\"" + sistema.getString("Nombre")+ "\"}";
+            System.out.println(salida);
 
-            Integer id = jObj.getInt("Id");
-            String nombre = jObj.getString("Nombre");
-
-            System.out.println(jObj.toString());
+            Integer id = sistema.getInt("Id");
+            String nombre = sistema.getString("Nombre");
             System.out.println("Id: " + id);
             System.out.println("Nombre: " + nombre);
             System.out.println("");
@@ -67,27 +68,20 @@ public class UD2EjerJson1402 {
 
             Object obj = iterador.next();
 
-            JSONObject jObj = (JSONObject) obj;
-            System.out.println(obj.toString());
-            System.out.println("Id: " + jObj.getInt("Id"));
-            System.out.println("Nombre: " + jObj.getString("Nombre"));
+            JSONObject sistema = (JSONObject) obj;
+            String salida = "{\"Id\":" + sistema.getInt("Id") + ",\"Nombre\":\"" + sistema.getString("Nombre") + "\"}";
+            System.out.println(salida);
+            //System.out.println(sistema.toString());
+            System.out.println("Id: " + sistema.getInt("Id"));
+            System.out.println("Nombre: " + sistema.getString("Nombre"));
             System.out.println("");
         }
 
         /*P5) Muestra directamente el valor de "Nombre" del registro 3*/
         System.out.println("Acceso directo a un elemento");
         System.out.println("---".repeat(40));
-        System.out.println("Del elemento con indidce 2 -> obtener el Nombre");
-        
-        for (int i = 0; i < sistemas.length(); i++) {
-
-            if(i == 2){
-                JSONObject sistema = (JSONObject) sistemas.getJSONObject(i);
-            System.out.println(sistema.getString("Nombre"));
-            System.out.println();
-            }
-            
-        }
+        System.out.println("Del elemento con indice 2 -> obtener el Nombre");
+        System.out.println(sistemas.getJSONObject(2).getString("Nombre"));
 
     }
 
